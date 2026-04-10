@@ -1,0 +1,21 @@
+{
+  "/_global-error/page": "/_global-error",
+  "/api/booking/route": "/api/booking",
+  "/api/contact/route": "/api/contact",
+  "/_not-found/page": "/_not-found",
+  "/api/careers/route": "/api/careers",
+  "/favicon.ico/route": "/favicon.ico",
+  "/robots.txt/route": "/robots.txt",
+  "/sitemap.xml/route": "/sitemap.xml",
+  "/about/page": "/about",
+  "/faq/page": "/faq",
+  "/page": "/",
+  "/for-facilities/page": "/for-facilities",
+  "/privacy-policy/page": "/privacy-policy",
+  "/services/page": "/services",
+  "/service-areas/page": "/service-areas",
+  "/book/page": "/book",
+  "/contact/page": "/contact",
+  "/careers/page": "/careers",
+  "/service-areas/[slug]/page": "/service-areas/[slug]"
+}

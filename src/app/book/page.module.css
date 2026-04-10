@@ -1,0 +1,108 @@
+.phoneLink {
+  color: rgba(255, 255, 255, 0.95);
+  font-weight: 700;
+  text-decoration: underline;
+  text-decoration-color: rgba(255, 255, 255, 0.3);
+  transition: text-decoration-color 0.2s;
+}
+
+.phoneLink:hover {
+  text-decoration-color: var(--white);
+}
+
+/* ══════════ Form Container ══════════ */
+.formContainer {
+  max-width: 820px;
+}
+
+.successBanner {
+  padding: 2rem;
+  border-radius: var(--radius-2xl);
+}
+
+.successBanner strong {
+  display: block;
+  font-size: 1.15rem;
+  margin-bottom: 0.35rem;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.formSection {
+  padding: 2rem;
+  background: var(--light-bg);
+  border-radius: var(--radius-2xl);
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.sectionLabel {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.sectionLabel svg {
+  color: var(--primary-600);
+}
+
+.sectionLabel h3 {
+  font-size: 1.05rem;
+  font-weight: 700;
+}
+
+.fieldGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+
+.subLabel {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--slate-700);
+  margin-top: 0.25rem;
+}
+
+.checkGrid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0.75rem;
+}
+
+.submitBtn {
+  border-radius: var(--radius-full);
+  padding: 1rem;
+  font-size: 1rem;
+}
+
+.spinner {
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+.formNote {
+  text-align: center;
+  font-size: 0.82rem;
+  color: var(--slate-400);
+  margin-top: -0.5rem;
+}
+
+@media (max-width: 640px) {
+  .fieldGrid,
+  .checkGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .formSection {
+    padding: 1.5rem;
+  }
+}

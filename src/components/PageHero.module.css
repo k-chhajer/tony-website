@@ -1,0 +1,95 @@
+.hero {
+  position: relative;
+  overflow: hidden;
+  padding: 10rem 0 5rem;
+  background: var(--dark-900);
+  min-height: 380px;
+}
+
+.heroBg {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+}
+
+.heroBgImage {
+  object-fit: cover;
+  z-index: 0;
+}
+
+.heroBgOverlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0.55) 0%,
+    rgba(0, 0, 0, 0.65) 50%,
+    rgba(0, 0, 0, 0.75) 100%
+  );
+  z-index: 1;
+}
+
+.heroGlow {
+  position: absolute;
+  top: -30%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 700px;
+  height: 700px;
+  border-radius: 50%;
+  background: radial-gradient(
+    circle,
+    rgba(59, 130, 246, 0.08) 0%,
+    transparent 70%
+  );
+}
+
+.heroPattern {
+  position: absolute;
+  inset: 0;
+  background-image: radial-gradient(
+    rgba(255, 255, 255, 0.03) 1px,
+    transparent 1px
+  );
+  background-size: 24px 24px;
+}
+
+.heroInner {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 1.25rem;
+  max-width: 780px;
+  margin: 0 auto;
+}
+
+.heroTitle {
+  color: var(--white);
+  font-size: clamp(2rem, 4.5vw, 3.25rem);
+  letter-spacing: -0.025em;
+}
+
+.heroSub {
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 1.05rem;
+  max-width: 600px;
+  line-height: 1.7;
+}
+
+@media (max-width: 768px) {
+  .hero {
+    padding: 8rem 0 3.5rem;
+    min-height: auto;
+  }
+
+  .heroTitle {
+    font-size: clamp(1.6rem, 6vw, 2.5rem);
+  }
+
+  .heroSub {
+    font-size: 0.95rem;
+  }
+}

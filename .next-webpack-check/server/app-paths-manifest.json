@@ -1,0 +1,21 @@
+{
+  "/_global-error/page": "app/_global-error/page.js",
+  "/api/booking/route": "app/api/booking/route.js",
+  "/api/contact/route": "app/api/contact/route.js",
+  "/_not-found/page": "app/_not-found/page.js",
+  "/api/careers/route": "app/api/careers/route.js",
+  "/favicon.ico/route": "app/favicon.ico/route.js",
+  "/robots.txt/route": "app/robots.txt/route.js",
+  "/sitemap.xml/route": "app/sitemap.xml/route.js",
+  "/about/page": "app/about/page.js",
+  "/faq/page": "app/faq/page.js",
+  "/page": "app/page.js",
+  "/for-facilities/page": "app/for-facilities/page.js",
+  "/privacy-policy/page": "app/privacy-policy/page.js",
+  "/services/page": "app/services/page.js",
+  "/service-areas/page": "app/service-areas/page.js",
+  "/book/page": "app/book/page.js",
+  "/contact/page": "app/contact/page.js",
+  "/careers/page": "app/careers/page.js",
+  "/service-areas/[slug]/page": "app/service-areas/[slug]/page.js"
+}
