@@ -229,7 +229,15 @@
     align-items: flex-start;
     text-align: left;
     gap: 0.4rem;
+  }
+  
+  .contactList li > div,
+  .contactList li > a,
+  .contactList li > span {
+    flex: 1;
+    min-width: 0;
     word-break: break-word;
+    overflow-wrap: anywhere;
   }
   
   .contactList li svg {
