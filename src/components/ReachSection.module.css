@@ -199,6 +199,20 @@ a.contactItem:hover .contactIcon {
     padding: 1.5rem;
     border-radius: 20px;
   }
+
+  .contactItem {
+    align-items: flex-start;
+  }
+
+  .contactItem > div {
+    flex: 1;
+    min-width: 0;
+  }
+
+  .contactValue {
+    word-break: break-word;
+    overflow-wrap: anywhere;
+  }
 }
 
 .mobileCtaWrap {
