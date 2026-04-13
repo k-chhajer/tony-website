@@ -317,7 +317,7 @@
 .missionBadgeSub {
   display: block;
   font-size: 0.68rem;
-  color: var(--gray-500);
+  color: var(--gray-700);
   font-weight: 500;
 }
 
@@ -344,6 +344,13 @@
 }
 
 .missionRight {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.missionRightTop,
+.missionRightBottom {
   display: flex;
   flex-direction: column;
   gap: 1.25rem;
@@ -1042,6 +1049,22 @@
     gap: 3rem;
   }
 
+  .missionRight {
+    display: contents;
+  }
+
+  .missionRightTop {
+    grid-row: 1;
+  }
+
+  .missionLeft {
+    grid-row: 2;
+  }
+
+  .missionRightBottom {
+    grid-row: 3;
+  }
+
   .heroContent {
     padding: 8rem 0 2rem;
     width: min(var(--container), 100% - 2rem);
@@ -1169,12 +1192,24 @@
     gap: 2.5rem;
   }
 
+  .missionRightTop {
+    align-items: center;
+    text-align: center;
+  }
+
+  .missionCta {
+    display: flex;
+    width: fit-content;
+    margin: 0 auto;
+    margin-top: 0.5rem;
+  }
+
   .missionImageBlock {
     border-radius: 20px;
   }
 
   .missionSmallImages {
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(3, 1fr);
     gap: 0.75rem;
   }
 
@@ -1299,7 +1334,8 @@
 
 @media (max-width: 480px) {
   .missionSmallImages {
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0.5rem;
   }
 
   .areasGrid {

@@ -152,7 +152,7 @@ export default function HomePage() {
             <Reveal>
               <div className={styles.missionImageBlock}>
                 <Image
-                  src="/images/service-vehicle.png"
+                  src="/images/front4.jpg"
                   alt="Norfolk Patient Transport vehicle at hospital"
                   fill
                   className={styles.missionMainImg}
@@ -213,8 +213,9 @@ export default function HomePage() {
           </div>
 
           <div className={styles.missionRight}>
-            <Reveal>
-              <span className={styles.missionEyebrow}>Our Mission</span>
+            <div className={styles.missionRightTop}>
+              <Reveal>
+              <span className="eyebrow">Our Mission</span>
             </Reveal>
             <Reveal delay={60}>
               <h2 className={styles.missionTitle}>
@@ -237,6 +238,9 @@ export default function HomePage() {
                 equipped vehicles ensure patients travel safely and arrive on time.
               </p>
             </Reveal>
+          </div>
+
+          <div className={styles.missionRightBottom}>
 
             <div className={styles.missionHighlights}>
               <Reveal delay={180}>
@@ -284,7 +288,8 @@ export default function HomePage() {
             </Reveal>
           </div>
         </div>
-      </section>
+      </div>
+    </section>
 
       {/* ══════════ Services Carousel ══════════ */}
       <section className={styles.servicesOuter}>
@@ -422,7 +427,7 @@ export default function HomePage() {
             {SERVICE_AREAS.map((area, i) => (
               <Reveal key={area.slug} delay={i * 50}>
                 <Link
-                  href={`/service-areas/${area.slug}`}
+                  href="/book"
                   className={styles.areaCard}
                 >
                   <Image
@@ -476,7 +481,7 @@ export default function HomePage() {
               </Link>
             </div>
             <div className={styles.faqRight}>
-              <FAQAccordion items={FAQ_ITEMS.slice(0, 5)} defaultOpen={0} />
+              <FAQAccordion items={FAQ_ITEMS.slice(0, 7)} defaultOpen={0} />
             </div>
             <div className={`${styles.mobileCtaWrap} ${styles.faqMobileCta}`}>
               <Link href="/faq" className={styles.faqViewAll}>

@@ -45,7 +45,7 @@ const specializations = [
   { title: "Wheelchair Transport", image: "/images/about-care.png" },
   { title: "Stretcher Transport", image: "/images/stretcher.jpg" },
   { title: "Ambulatory Transport", image: "/images/oygensupport.jpeg" },
-  { title: "Dialysis & Specialist Care", image: "/images/dialysis.jpg" },
+  { title: "Dialysis Transport", image: "/images/dialysis.jpg" },
 ];
 
 export default function AboutPage() {

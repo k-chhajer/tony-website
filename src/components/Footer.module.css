@@ -174,43 +174,77 @@
 }
 
 @media (max-width: 640px) {
+  .brandDesc,
+  .footerCta {
+    display: none !important;
+  }
+
   .footerGrid {
-    grid-template-columns: 1fr;
-    gap: 2.5rem;
-    text-align: center;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 1.5rem;
+    text-align: left;
   }
 
   .footerMain {
-    padding: 3rem 0 2rem;
+    padding: 2.5rem 0 1.5rem;
   }
 
   .brandCol {
-    grid-column: auto;
-    align-items: center;
+    width: 100%;
+    align-items: flex-start;
+  }
+  
+  .col {
+    width: calc(33.33% - 1rem);
   }
 
   .colTitle {
-    text-align: center;
+    font-size: 0.6rem;
+    text-align: left;
+    margin-bottom: 0.35rem;
   }
 
   .linkList {
-    align-items: center;
+    align-items: flex-start;
   }
 
-  .contactList li {
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
+  .linkList li a {
+    font-size: 0.65rem;
+  }
+
+  .contactList {
     gap: 0.4rem;
+  }
+  
+  .contactList li {
+    font-size: 0.65rem;
+    flex-direction: row;
+    align-items: flex-start;
+    text-align: left;
+    gap: 0.4rem;
+    word-break: break-word;
   }
   
   .contactList li svg {
     margin-top: 0;
+    width: 12px;
+    height: 12px;
+  }
+  
+  .contactNote {
+    font-size: 0.55rem;
   }
 
   .bottomBarInner {
-    flex-direction: column;
+    flex-direction: row;
     text-align: center;
-    gap: 1.25rem;
+    gap: 0.5rem;
+  }
+  
+  .bottomBarInner p,
+  .bottomLink {
+    font-size: 0.6rem;
   }
 }

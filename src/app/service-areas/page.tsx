@@ -31,7 +31,7 @@ export default function ServiceAreasPage() {
             {SERVICE_AREAS.map((area, i) => (
               <Reveal key={area.slug} delay={i * 50}>
                 <Link
-                  href={`/service-areas/${area.slug}`}
+                  href="/book"
                   className={styles.areaCard}
                 >
                   <Image
@@ -49,7 +49,7 @@ export default function ServiceAreasPage() {
                       <h3 className={styles.areaCardName}>{area.name}</h3>
                       <p className={styles.areaCardSummary}>{area.summary}</p>
                       <span className={styles.areaCardLink}>
-                        View Details
+                        Book Transport
                         <ArrowUpRight size={13} />
                       </span>
                     </div>
