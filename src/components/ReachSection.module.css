@@ -204,7 +204,7 @@ a.contactItem:hover .contactIcon {
     align-items: flex-start;
   }
 
-  .contactItem > div {
+  .contactItem > div:not(.contactIcon) {
     flex: 1;
     min-width: 0;
   }
