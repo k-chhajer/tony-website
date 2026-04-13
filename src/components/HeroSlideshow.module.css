@@ -13,3 +13,9 @@
 .active {
   opacity: 1;
 }
+
+@media (max-width: 768px) {
+  .front4Slide {
+    object-position: 62% center;
+  }
+}

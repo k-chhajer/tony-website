@@ -1208,6 +1208,10 @@
     border-radius: 20px;
   }
 
+  .missionMainImg {
+    object-position: 62% center;
+  }
+
   .missionSmallImages {
     grid-template-columns: repeat(3, 1fr);
     gap: 0.75rem;

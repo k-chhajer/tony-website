@@ -180,11 +180,11 @@
   }
 
   .footerGrid {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    gap: 1.5rem;
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 1rem;
     text-align: left;
+    align-items: start;
   }
 
   .footerMain {
@@ -192,17 +192,14 @@
   }
 
   .brandCol {
-    width: 100%;
+    width: auto;
+    grid-column: 1 / -1;
     align-items: flex-start;
   }
   
   .col {
-    width: calc(50% - 0.75rem);
-  }
-
-  .col:last-child {
-    width: 100%;
-    margin-top: 0.5rem;
+    width: auto;
+    min-width: 0;
   }
 
   .colTitle {

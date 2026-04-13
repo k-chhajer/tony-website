@@ -30,7 +30,7 @@ export default function HeroSlideshow() {
           src={src}
           alt="Norfolk Patient Transport"
           fill
-          className={`${styles.slide} ${i === current ? styles.active : ""}`}
+          className={`${styles.slide} ${src === "/images/front4.jpg" ? styles.front4Slide : ""} ${i === current ? styles.active : ""}`}
           priority={i === 0}
           sizes="100vw"
         />
