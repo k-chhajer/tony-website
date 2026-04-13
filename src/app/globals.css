@@ -47,7 +47,7 @@
   --bg-dark: var(--dark-800);
   --bg-darker: var(--dark-900);
   --text-primary: var(--dark-900);
-  --text-secondary: var(--gray-600);
+  --text-secondary: var(--gray-700);
   --text-on-dark: rgba(255, 255, 255, 0.85);
   --accent: var(--dark-900);
   --accent-hover: var(--dark-700);
@@ -168,7 +168,7 @@ h4 {
 }
 
 p {
-  color: var(--gray-600);
+  color: var(--gray-700);
   font-size: 1.0625rem;
   line-height: 1.75;
 }

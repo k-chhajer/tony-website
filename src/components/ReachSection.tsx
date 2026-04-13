@@ -9,6 +9,7 @@ interface ReachSectionProps {
   description: string;
   primaryLabel?: string;
   primaryHref?: string;
+  variant?: "default" | "white";
 }
 
 export default function ReachSection({
@@ -16,9 +17,10 @@ export default function ReachSection({
   description,
   primaryLabel = "Book Transport",
   primaryHref = "/book",
+  variant = "default",
 }: ReachSectionProps) {
   return (
-    <section className={styles.section}>
+    <section className={`${styles.section} ${variant === "white" ? styles.sectionWhite : ""}`}>
       <div className={`container ${styles.grid}`}>
         <Reveal>
           <div className={styles.message}>

@@ -7,6 +7,7 @@ interface PageHeroProps {
   title: string;
   description: string;
   backgroundImage?: string;
+  imagePosition?: string;
   children?: React.ReactNode;
 }
 
@@ -15,6 +16,7 @@ export default function PageHero({
   title,
   description,
   backgroundImage,
+  imagePosition = "center",
   children,
 }: PageHeroProps) {
   return (
@@ -27,6 +29,7 @@ export default function PageHero({
               alt=""
               fill
               className={styles.heroBgImage}
+              style={{ objectPosition: imagePosition }}
               priority
             />
             <div className={styles.heroBgOverlay} />

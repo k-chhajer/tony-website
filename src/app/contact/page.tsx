@@ -15,7 +15,8 @@ export default function ContactPage() {
         eyebrow="Contact Us"
         title="Get in Touch"
         description="Have a question about your upcoming transport, need to arrange a ride, or want to discuss setting up a facility account? We're available 24/7."
-        backgroundImage="/images/customersupport.jpg"
+        backgroundImage="/images/customersupport2.jpg"
+        imagePosition="top"
       />
 
       <ReachSection

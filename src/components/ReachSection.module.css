@@ -4,6 +4,11 @@
   border-top: 1px solid var(--gray-200);
 }
 
+.sectionWhite {
+  background: var(--white);
+  border-top: none;
+}
+
 .grid {
   display: grid;
   grid-template-columns: 1.2fr 1fr;
@@ -27,7 +32,7 @@
 
 .desc {
   font-size: 1rem;
-  color: var(--gray-600);
+  color: var(--gray-700);
   line-height: 1.7;
   max-width: 480px;
 }
@@ -154,7 +159,7 @@ a.contactItem:hover .contactIcon {
   display: block;
   font-size: 0.72rem;
   font-weight: 600;
-  color: var(--gray-500);
+  color: var(--gray-700);
   text-transform: uppercase;
   letter-spacing: 0.04em;
   margin-bottom: 0.1rem;

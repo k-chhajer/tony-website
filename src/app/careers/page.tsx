@@ -24,7 +24,7 @@ export default function CareersPage() {
               transportation throughout Norfolk and Haldimand County.
             </p>
 
-            <p>
+            <p className={styles.lead}>
               As a member of our team, you will transport patients safely and
               comfortably to and from hospitals, clinics, dialysis centres,
               retirement homes, and private residences. You will work directly
@@ -33,7 +33,7 @@ export default function CareersPage() {
               pickup to drop-off.
             </p>
 
-            <p>
+            <p className={styles.lead}>
               We operate a modern fleet of wheelchair and stretcher accessible
               vehicles. Every trip includes trained attendants who follow
               established safety protocols and patient handling procedures. Our
@@ -42,7 +42,7 @@ export default function CareersPage() {
               Hagersville, and Tillsonburg.
             </p>
 
-            <p className={styles.italic}>
+            <p className={styles.lead}>
               We welcome candidates at various experience levels. During the
               review process, candidates will be assessed for the appropriate
               role, and offers will align with that level.
@@ -53,15 +53,15 @@ export default function CareersPage() {
             <h2>Open Positions</h2>
 
             <h3>Patient Transport Attendant</h3>
-            <p className={styles.meta}>Full-Time / Part-Time &middot; Norfolk County, ON</p>
+            <p className={styles.meta}>Full-Time &middot; Norfolk County, ON</p>
             <p>
               Provide safe, professional non-emergency transport for patients.
               Assist with wheelchair and stretcher transfers, coordinate with
               dispatch, and deliver compassionate care on every trip.
             </p>
 
-            <h3>Driver (Medical Transport)</h3>
-            <p className={styles.meta}>Full-Time &middot; Norfolk &amp; Haldimand County, ON</p>
+            <h3>Transport Driver</h3>
+            <p className={styles.meta}>Full-Time &middot; Norfolk County, ON</p>
             <p>
               Operate patient transport vehicles safely and efficiently. Maintain
               vehicle readiness, follow scheduled routes, and work closely with

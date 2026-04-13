@@ -23,8 +23,8 @@
 }
 
 .storyProse p {
-  font-size: 1rem;
-  color: var(--gray-700);
+  font-size: 1.05rem;
+  color: var(--dark-900);
   line-height: 1.85;
   text-align: justify;
 }
@@ -159,16 +159,59 @@
   gap: 1.25rem;
 }
 
+.valuesGrid > div {
+  height: 100%;
+}
+
 .valueCard {
-  padding: 1.75rem;
+  position: relative;
+  background: var(--gray-50);
+  border: 1px solid var(--gray-100);
+  padding: 2rem 1.75rem;
   display: flex;
   flex-direction: column;
   gap: 0.75rem;
-  border-radius: var(--radius-2xl);
+  border-radius: 24px;
+  transition: all 0.35s var(--ease);
+  height: 100%;
 }
 
-.valueCard h3 { font-size: 1.05rem; }
-.valueCard p { font-size: 0.88rem; }
+.valueCard:hover {
+  background: var(--white);
+  border-color: var(--gray-300);
+  box-shadow: 0 8px 28px rgba(0, 0, 0, 0.06);
+  transform: translateY(-4px);
+}
+
+.valueIcon {
+  width: 48px;
+  height: 48px;
+  border-radius: 14px;
+  background: var(--dark-900);
+  color: var(--white);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  transition: transform 0.35s var(--ease);
+}
+
+.valueCard:hover .valueIcon {
+  transform: scale(1.08);
+}
+
+.valueCard h3 {
+  font-size: 1.05rem;
+  font-weight: 600;
+  color: var(--dark-900);
+  margin-top: 0.25rem;
+}
+
+.valueCard p {
+  font-size: 0.85rem;
+  color: var(--gray-500);
+  line-height: 1.6;
+}
 
 /* ══════════ Responsive ══════════ */
 @media (max-width: 1024px) {
@@ -178,8 +221,13 @@
 }
 
 @media (max-width: 640px) {
+  .headCenter { margin-bottom: 2rem; }
+  .storyProse p { text-align: left; font-size: 0.92rem; }
   .founders { flex-direction: column; align-items: center; gap: 2rem; }
-  .circle { width: 170px; height: 170px; }
-  .specGrid { grid-template-columns: repeat(2, 1fr); }
+  .circle { width: 160px; height: 160px; }
+  .specGrid { grid-template-columns: 1fr 1fr; gap: 0.75rem; }
+  .specCard { height: 180px; }
+  .specTitle { font-size: 0.85rem; padding: 1rem; }
   .valuesGrid { grid-template-columns: 1fr; }
+  .valueCard { padding: 1.25rem; }
 }

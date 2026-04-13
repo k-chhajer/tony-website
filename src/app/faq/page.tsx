@@ -19,7 +19,7 @@ export default function FAQPage() {
         eyebrow="FAQ"
         title="Frequently Asked Questions"
         description="Find quick answers to the most common questions about our non-emergency patient transport services, booking process, and coverage areas."
-        backgroundImage="/images/facilitiesbackground.jpg"
+        backgroundImage="/images/facilitiesbackground2.jpg"
       />
 
       <section className="section">

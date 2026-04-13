@@ -27,22 +27,9 @@
   text-decoration: none;
 }
 
-.logoMark {
-  width: 32px;
-  height: 32px;
-  border-radius: var(--radius-sm);
-  background: var(--white);
-  color: var(--dark-900);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.logoName {
-  font-size: 0.95rem;
-  font-weight: 800;
-  color: var(--white);
-  letter-spacing: -0.02em;
+.logoImg {
+  height: 48px;
+  width: auto;
 }
 
 .brandDesc {

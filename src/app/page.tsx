@@ -2,8 +2,6 @@ import Image from "next/image";
 import Link from "next/link";
 import {
   ArrowUpRight,
-  ArrowRight,
-  ArrowLeft,
   Phone,
   MapPin,
   Clock,
@@ -15,9 +13,13 @@ import {
   ClipboardList,
   CalendarCheck,
   CreditCard,
+  ExternalLink,
 } from "lucide-react";
 import Reveal from "@/components/Reveal";
 import FAQAccordion from "@/components/FAQAccordion";
+import ReachSection from "@/components/ReachSection";
+import ReviewsMarquee from "@/components/ReviewsMarquee";
+import HeroSlideshow from "@/components/HeroSlideshow";
 import ServiceCarousel from "@/components/ServiceCarousel";
 import type { ServiceSlide } from "@/components/ServiceCarousel";
 import {
@@ -46,22 +48,14 @@ export default function HomePage() {
       {/* ══════════ Hero ══════════ */}
       <section className={styles.heroOuter}>
         <div className={styles.hero}>
-          <Image
-            src={IMAGES.hero}
-            alt="Norfolk Patient Transport — professional medical transport"
-            fill
-            className={styles.heroBgImage}
-            priority
-          />
+          <HeroSlideshow />
           <div className={styles.heroOverlay} />
 
           <div className={styles.heroContent}>
             <div className={styles.heroCenterBlock}>
               <Reveal delay={80}>
                 <h1 className={styles.heroTitle}>
-                  Safe, Reliable Patient Transport
-                  <br />
-                  for Norfolk &amp; Haldimand
+                  Norfolk Patient Transport
                 </h1>
               </Reveal>
               <Reveal delay={140}>
@@ -94,13 +88,9 @@ export default function HomePage() {
             <div className={styles.heroBottom}>
               <Reveal delay={240}>
                 <div className={styles.heroBottomLeft}>
-                  <div className={styles.heroCommitmentText}>
-                    Professional, compassionate
-                    <br />
-                    transport for patients across
-                    <br />
-                    Norfolk &amp; Haldimand County.
-                  </div>
+                  <span className={styles.heroInfoPill}>
+                    <MapPin size={12} /> Serving 9+ Service Areas
+                  </span>
                   <div className={styles.heroSatisfiedBadge}>
                     <div className={styles.heroBadgeIcon}>
                       <ShieldCheck size={16} />
@@ -119,10 +109,7 @@ export default function HomePage() {
                       <Clock size={12} /> 24/7 Dispatch
                     </span>
                     <span className={styles.heroInfoPill}>
-                      <Truck size={12} /> Wheelchair &amp; Stretcher
-                    </span>
-                    <span className={styles.heroInfoPill}>
-                      <MapPin size={12} /> 9+ Service Areas
+                      <Truck size={12} /> Wheelchair & Stretcher
                     </span>
                   </div>
                 </div>
@@ -170,20 +157,29 @@ export default function HomePage() {
               <div className={styles.missionSmallImages}>
                 <div className={styles.missionSmallImg}>
                   <Image
-                    src="/images/about-care.png"
-                    alt="Patient care inside transport vehicle"
+                    src="/images/dialysis.jpg"
+                    alt="Dialysis transport service"
                     fill
                     className={styles.missionSmallImgInner}
-                    sizes="(max-width: 768px) 50vw, 25vw"
+                    sizes="(max-width: 768px) 33vw, 20vw"
                   />
                 </div>
                 <div className={styles.missionSmallImg}>
                   <Image
-                    src="/images/why-choose-us.png"
-                    alt="Attendant assisting patient at home"
+                    src="/images/stretchertransport.jpg"
+                    alt="Stretcher transport service"
                     fill
                     className={styles.missionSmallImgInner}
-                    sizes="(max-width: 768px) 50vw, 25vw"
+                    sizes="(max-width: 768px) 33vw, 20vw"
+                  />
+                </div>
+                <div className={styles.missionSmallImg}>
+                  <Image
+                    src="/images/about-care.png"
+                    alt="Patient care and compassion"
+                    fill
+                    className={styles.missionSmallImgInner}
+                    sizes="(max-width: 768px) 33vw, 20vw"
                   />
                 </div>
               </div>
@@ -270,10 +266,13 @@ export default function HomePage() {
           <div className={styles.servicesInner}>
             <div className={styles.servicesHeader}>
               <div className={styles.servicesHeaderLeft}>
-                <span className={styles.servicesLabel}>Services</span>
+                <span className="eyebrow">Services</span>
                 <h2 className={styles.servicesTitle}>
                   Explore Our Transport Services
                 </h2>
+                <p className={styles.servicesSub}>
+                  Professional, accessible transport tailored to every patient need.
+                </p>
               </div>
               <div className={styles.servicesHeaderRight}>
                 <Link href="/services" className={styles.servicesViewAll}>
@@ -291,39 +290,29 @@ export default function HomePage() {
               <ServiceCarousel items={SERVICE_SLIDES} />
             </Reveal>
           </div>
-
-          <div className={styles.servicesInner}>
-            <div className={styles.servicesBottom}>
-              <div className={styles.servicesNav}>
-                <button className={styles.navArrowBtn} aria-label="Previous">
-                  <ArrowLeft size={16} />
-                </button>
-                <button className={styles.navArrowBtnActive} aria-label="Next">
-                  <ArrowRight size={16} color="white" />
-                </button>
-              </div>
-              <p className={styles.servicesFootnote}>
-                Book transport for hospital discharges, medical appointments,
-                dialysis, or inter-facility transfers with ease.
-              </p>
-            </div>
-          </div>
         </div>
       </section>
 
       {/* ══════════ How It Works ══════════ */}
       <section className={`section ${styles.stepsSection}`}>
         <div className="container">
-          <Reveal>
-            <div className={styles.stepsHeader}>
+          <div className={styles.stepsHeader}>
+            <div className={styles.stepsHeaderLeft}>
               <span className="eyebrow">How It Works</span>
-              <h2 className={styles.stepsTitle}>Book Your Transport in 4 Simple Steps</h2>
+              <h2>Book in 4 Simple Steps</h2>
               <p className={styles.stepsSub}>
-                From booking to arrival, we keep the process simple so you can
-                focus on what matters.
+                From booking to arrival, we keep a simple process.
               </p>
             </div>
-          </Reveal>
+            <div className={styles.stepsHeaderRight}>
+              <Link href="/book" className={styles.stepsCtaBtn}>
+                Book Transport Now
+                <span className={styles.stepsCtaArrow}>
+                  <ArrowUpRight size={14} />
+                </span>
+              </Link>
+            </div>
+          </div>
 
           <div className={styles.stepsGrid}>
             {[
@@ -362,42 +351,29 @@ export default function HomePage() {
               </Reveal>
             ))}
           </div>
-
-          <Reveal delay={350}>
-            <div className={styles.stepsCta}>
-              <Link href="/book" className={styles.stepsCtaBtn}>
-                Book Transport Now
-                <span className={styles.stepsCtaArrow}>
-                  <ArrowUpRight size={14} />
-                </span>
-              </Link>
-            </div>
-          </Reveal>
         </div>
       </section>
 
       {/* ══════════ Service Areas ══════════ */}
-      <section className={`section ${styles.areasSection}`}>
+      <section className={`section ${styles.areasSection} section-alt`}>
         <div className="container">
           <div className={styles.areasHeader}>
-            <Reveal>
-              <span className={styles.areasLabel}>Service Areas</span>
-              <h2 className={styles.areasTitle}>
-                Where We Serve
-              </h2>
+            <div className={styles.areasHeaderLeft}>
+              <span className="eyebrow">Service Areas</span>
+              <h2>Where We Serve</h2>
               <p className={styles.areasSub}>
                 Reliable patient transport across Norfolk County, Haldimand
                 County, and surrounding communities.
               </p>
-            </Reveal>
-            <Reveal delay={60}>
+            </div>
+            <div className={styles.areasHeaderRight}>
               <Link href="/service-areas" className={styles.areasViewAll}>
                 View All Areas
                 <span className={styles.areasViewAllIcon}>
                   <ArrowUpRight size={14} />
                 </span>
               </Link>
-            </Reveal>
+            </div>
           </div>
 
           <div className={styles.areasGrid}>
@@ -434,30 +410,69 @@ export default function HomePage() {
       {/* ══════════ FAQ ══════════ */}
       <section className={`section ${styles.faqSection}`}>
         <div className="container">
-          <Reveal>
-            <div className={styles.faqHeader}>
+          <div className={styles.faqGrid}>
+            <div className={styles.faqLeft}>
               <span className="eyebrow">FAQ</span>
               <h2>Frequently Asked Questions</h2>
               <p className={styles.faqSub}>
                 Quick answers about our non-emergency patient transport
                 services, booking, and coverage areas.
               </p>
-            </div>
-          </Reveal>
-          <Reveal delay={60}>
-            <div className={styles.faqWrap}>
-              <FAQAccordion items={FAQ_ITEMS.slice(0, 8)} defaultOpen={0} />
-            </div>
-          </Reveal>
-          <Reveal delay={100}>
-            <div className={styles.faqCta}>
-              <Link href="/faq" className="btn btn-outline">
-                View All Questions <ArrowRight size={14} />
+              <Link href="/faq" className={styles.faqViewAll}>
+                View All
+                <span className={styles.faqViewAllIcon}>
+                  <ArrowUpRight size={14} />
+                </span>
               </Link>
             </div>
-          </Reveal>
+            <div className={styles.faqRight}>
+              <FAQAccordion items={FAQ_ITEMS.slice(0, 5)} defaultOpen={0} />
+            </div>
+          </div>
         </div>
       </section>
+
+      {/* ══════════ Reviews ══════════ */}
+      <section className={styles.reviewsSection}>
+        <div className={styles.reviewsBox}>
+          <div className={styles.reviewsInner}>
+            <div className={styles.reviewsHeader}>
+              <div className={styles.reviewsHeaderLeft}>
+                <span className="eyebrow">What Patients Say</span>
+                <h2>Trusted by Patients &amp; Families</h2>
+                <p className={styles.reviewsSub}>
+                  Read what our patients and their families have to say about their experience.
+                </p>
+              </div>
+              <div className={styles.reviewsHeaderRight}>
+                <a
+                  href="https://www.google.com/maps/place/Norfolk+Patient+Transport"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className={styles.reviewsViewAll}
+                >
+                  Google Reviews
+                  <span className={styles.reviewsViewAllIcon}>
+                    <ExternalLink size={14} />
+                  </span>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <div className={styles.reviewsCarouselWrap}>
+            <Reveal>
+              <ReviewsMarquee />
+            </Reveal>
+          </div>
+        </div>
+      </section>
+
+      <ReachSection
+        title={"Ready to Book\nYour Transport?"}
+        description="Schedule safe, reliable patient transportation online or get in touch with our dispatch team — available 24/7 to help coordinate your ride."
+        variant="white"
+      />
     </>
   );
 }

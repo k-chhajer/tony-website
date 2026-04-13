@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import { Phone, Mail, MapPin, ArrowUpRight } from "lucide-react";
 import { SITE } from "@/lib/constants";
 import styles from "./Footer.module.css";
@@ -23,21 +24,13 @@ export default function Footer() {
           {/* Brand */}
           <div className={styles.brandCol}>
             <Link href="/" className={styles.logo}>
-              <div className={styles.logoMark}>
-                <svg
-                  width="16"
-                  height="16"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  strokeWidth="2.5"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                >
-                  <path d="M12 2v20M2 12h20" />
-                </svg>
-              </div>
-              <span className={styles.logoName}>{SITE.name}</span>
+              <Image
+                src="/images/logo.svg"
+                alt={SITE.name}
+                width={180}
+                height={40}
+                className={styles.logoImg}
+              />
             </Link>
             <p className={styles.brandDesc}>
               Safe and reliable non-emergency medical transportation serving

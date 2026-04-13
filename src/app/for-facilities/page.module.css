@@ -186,12 +186,13 @@
   .benefitsGrid { grid-template-columns: repeat(2, 1fr); }
   .dischargeSplit { grid-template-columns: 1fr; gap: 2rem; }
   .facilityGrid { grid-template-columns: repeat(2, 1fr); }
-  .billingBanner { flex-direction: column; text-align: center; }
-  .billingInfo p { max-width: 100%; }
 }
 
 @media (max-width: 640px) {
   .benefitsGrid, .facilityGrid { grid-template-columns: 1fr; }
-  .heroCtas { flex-direction: column; align-items: center; }
-  .billingBanner { padding: 1.5rem; }
+  .benefitCard, .facilityCard { min-height: 240px; }
+  .cardBody { padding: 1.25rem; }
+  .cardBody h3 { font-size: 1rem; }
+  .sectionHeadCenter { margin-bottom: 2rem; }
+  .checkList li { font-size: 0.88rem; padding: 0.65rem 0.85rem; }
 }

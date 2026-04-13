@@ -28,15 +28,15 @@ export const metadata: Metadata = {
 
 const benefits = [
   { icon: <Clock size={24} />, title: "24/7 Dispatch Coordination", desc: "Schedule transports anytime. Our dispatch team coordinates with your staff to minimize delays and ensure smooth patient flow.", image: "/images/why-choose-us.png" },
-  { icon: <CreditCard size={24} />, title: "Net 30 Billing", desc: "Approved hospitals, clinics, retirement homes, and long-term care facilities can access streamlined invoicing with Net 30 payment terms.", image: "https://images.unsplash.com/photo-1554224155-6726b3ff858f?q=80&w=800&auto=format&fit=crop" },
+  { icon: <CreditCard size={24} />, title: "Net 30 Billing", desc: "Approved hospitals, clinics, retirement homes, and long-term care facilities can access streamlined invoicing with Net 30 payment terms.", image: "/images/payment.jpg" },
   { icon: <FileText size={24} />, title: "Simplified Booking", desc: "Book online or by phone. We capture all transport details upfront so there are no surprises or delays at pickup.", image: "/images/booking.jpg" },
   { icon: <ShieldCheck size={24} />, title: "Professional Attendants", desc: "Every trip includes trained attendants experienced in patient handling, mobility assistance, and facility protocols.", image: "/images/nonertransportteam.jpg" },
-  { icon: <Truck size={24} />, title: "Wheelchair & Stretcher Fleet", desc: "Our vehicles are fully equipped for wheelchair and stretcher transport, ensuring safe, comfortable patient transfers.", image: "/images/patienttrasport2.jpg" },
-  { icon: <Users size={24} />, title: "Dedicated Account Support", desc: "Facilities with regular transport needs receive consistent service and priority scheduling coordination.", image: "/images/customersupport.jpg" },
+  { icon: <Truck size={24} />, title: "Wheelchair & Stretcher Fleet", desc: "Our vehicles are fully equipped for wheelchair and stretcher transport, ensuring safe, comfortable patient transfers.", image: "/images/stretcher.jpg" },
+  { icon: <Users size={24} />, title: "Dedicated Account Support", desc: "Facilities with regular transport needs receive consistent service and priority scheduling coordination.", image: "/images/customersupport2.jpg" },
 ];
 
 const facilities = [
-  { icon: <Hospital size={22} />, title: "Hospitals", desc: "Discharge transport, inter-facility transfers, and appointment rides coordinated with your team.", image: "https://images.unsplash.com/photo-1586773860418-d37222d8fce3?q=80&w=800&auto=format&fit=crop" },
+  { icon: <Hospital size={22} />, title: "Hospitals", desc: "Discharge transport, inter-facility transfers, and appointment rides coordinated with your team.", image: "/images/brantfordgeneral.jpg" },
   { icon: <Home size={22} />, title: "Retirement Homes", desc: "Regular transport for residents needing medical appointments, specialist visits, and treatments.", image: "/images/retirementhome.jpeg" },
   { icon: <HeartHandshake size={22} />, title: "Long-Term Care Facilities", desc: "Recurring and on-demand transport with attendants trained in complex patient handling.", image: "https://images.unsplash.com/photo-1576765608535-5f04d1e3f289?q=80&w=800&auto=format&fit=crop" },
   { icon: <Stethoscope size={22} />, title: "Dialysis Clinics", desc: "Consistent, reliable scheduling for recurring dialysis appointments with on-time performance.", image: "/images/dialysis.jpg" },

@@ -1,0 +1,15 @@
+.slideshow {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+}
+
+.slide {
+  object-fit: cover;
+  opacity: 0;
+  transition: opacity 1.2s ease-in-out;
+}
+
+.active {
+  opacity: 1;
+}

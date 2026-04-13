@@ -17,7 +17,7 @@
 
 .sectionHead p {
   font-size: 0.95rem;
-  color: var(--gray-600);
+  color: var(--gray-700);
 }
 
 .servicesGrid {
@@ -130,19 +130,17 @@
 }
 
 .stepsHeader {
-  text-align: center;
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: flex-start;
   gap: 0.6rem;
   margin-bottom: 3rem;
   max-width: 520px;
-  margin-inline: auto;
 }
 
 .stepsHeader p {
   font-size: 0.95rem;
-  color: var(--gray-600);
+  color: var(--gray-700);
 }
 
 .stepsGrid {
@@ -151,10 +149,14 @@
   gap: 1.5rem;
 }
 
+.stepsGrid > div {
+  height: 100%;
+}
+
 .stepCard {
   position: relative;
-  background: var(--white);
-  border: 1px solid var(--gray-200);
+  background: var(--gray-50);
+  border: 1px solid var(--gray-100);
   border-radius: 24px;
   padding: 2rem 1.75rem;
   display: flex;
@@ -165,6 +167,7 @@
 }
 
 .stepCard:hover {
+  background: var(--white);
   border-color: var(--gray-300);
   box-shadow: 0 8px 28px rgba(0, 0, 0, 0.06);
   transform: translateY(-4px);
@@ -173,7 +176,7 @@
 .stepNum {
   font-size: 0.72rem;
   font-weight: 700;
-  color: var(--gray-400);
+  color: var(--gray-700);
   letter-spacing: 0.06em;
 }
 
@@ -202,7 +205,7 @@
 
 .stepCardDesc {
   font-size: 0.85rem;
-  color: var(--gray-600);
+  color: var(--gray-700);
   line-height: 1.65;
 }
 

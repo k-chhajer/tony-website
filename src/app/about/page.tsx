@@ -41,11 +41,11 @@ const values = [
 ];
 
 const specializations = [
-  { title: "Hospital Discharge", image: "https://images.unsplash.com/photo-1586773860418-d37222d8fce3?q=80&w=800&auto=format&fit=crop" },
-  { title: "Wheelchair Transport", image: "https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?q=80&w=800&auto=format&fit=crop" },
-  { title: "Stretcher Transport", image: "https://images.unsplash.com/photo-1576091160550-2173dba999ef?q=80&w=800&auto=format&fit=crop" },
-  { title: "Ambulatory Transport", image: "https://images.unsplash.com/photo-1551190822-a9ce113ac100?q=80&w=800&auto=format&fit=crop" },
-  { title: "Dialysis & Specialist Care", image: "https://images.unsplash.com/photo-1579684385127-1ef15d508118?q=80&w=800&auto=format&fit=crop" },
+  { title: "Hospital Discharge", image: "/images/hospital-exterior-2.png" },
+  { title: "Wheelchair Transport", image: "/images/about-care.png" },
+  { title: "Stretcher Transport", image: "/images/stretcher.jpg" },
+  { title: "Ambulatory Transport", image: "/images/oygensupport.jpeg" },
+  { title: "Dialysis & Specialist Care", image: "/images/dialysis.jpg" },
 ];
 
 export default function AboutPage() {
@@ -149,8 +149,8 @@ export default function AboutPage() {
           <div className={styles.valuesGrid}>
             {values.map((v, i) => (
               <Reveal key={i} delay={i * 70}>
-                <div className={`card ${styles.valueCard}`}>
-                  <div className="icon-bubble">{v.icon}</div>
+                <div className={styles.valueCard}>
+                  <div className={styles.valueIcon}>{v.icon}</div>
                   <h3>{v.title}</h3>
                   <p>{v.desc}</p>
                 </div>
