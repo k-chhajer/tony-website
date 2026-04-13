@@ -29,6 +29,9 @@
 .scrolled .phonePill {
   color: var(--dark-900);
   border-color: var(--gray-300);
+  opacity: 1;
+  pointer-events: auto;
+  transform: translateY(0);
 }
 
 .headerInner {
@@ -94,6 +97,9 @@
   text-decoration: none;
   backdrop-filter: blur(8px);
   white-space: nowrap;
+  opacity: 0;
+  pointer-events: none;
+  transform: translateY(-10px);
 }
 
 .phonePill:hover {
@@ -118,10 +124,16 @@
   border: 3px solid rgba(255, 255, 255, 0.25);
   transition: all 0.25s var(--ease);
   white-space: nowrap;
+  opacity: 0;
+  pointer-events: none;
+  transform: translateY(-10px);
 }
 
 .scrolled .bookBtn {
   border-color: var(--gray-200);
+  opacity: 1;
+  pointer-events: auto;
+  transform: translateY(0);
 }
 
 .bookBtn:hover {
@@ -206,7 +218,7 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 1.25rem 1.5rem;
+  padding: 1.25rem 1.5rem 1.25rem 1rem;
   border-bottom: 1px solid var(--gray-200);
 }
 
@@ -311,7 +323,16 @@
 /* Responsive */
 @media (max-width: 1100px) {
   .leftNav {
-    display: none;
+    gap: 0.35rem;
+  }
+
+  .mobileHiddenPill {
+    display: none !important;
+  }
+
+  .navPill {
+    font-size: 0.72rem;
+    padding: 0.35rem 0.75rem;
   }
 
   .phonePill {
@@ -331,14 +352,8 @@
   }
 }
 
-@media (max-width: 640px) {
+@media (max-width: 768px) {
   .bookBtn {
-    font-size: 0.72rem;
-    padding: 0.28rem 0.28rem 0.28rem 0.75rem;
-  }
-
-  .bookBtnArrow {
-    width: 20px;
-    height: 20px;
+    display: none !important;
   }
 }

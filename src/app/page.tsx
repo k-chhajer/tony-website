@@ -79,26 +79,21 @@ export default function HomePage() {
                     className={styles.heroCtaOutline}
                   >
                     <Phone size={14} />
-                    Call Dispatch
+                    {SITE.phoneDisplay}
                   </a>
                 </div>
               </Reveal>
             </div>
 
-            <div className={styles.heroBottom}>
+            <div className={`${styles.heroBottom} ${styles.desktopHeroTags}`}>
               <Reveal delay={240}>
                 <div className={styles.heroBottomLeft}>
                   <span className={styles.heroInfoPill}>
-                    <MapPin size={12} /> Serving 9+ Service Areas
+                    <MapPin size={12} /> 9+ Service Areas
                   </span>
-                  <div className={styles.heroSatisfiedBadge}>
-                    <div className={styles.heroBadgeIcon}>
-                      <ShieldCheck size={16} />
-                    </div>
-                    <span className={styles.heroSatisfiedText}>
-                      BLS CERTIFIED ATTENDANTS
-                    </span>
-                  </div>
+                  <span className={styles.heroInfoPill}>
+                    <ShieldCheck size={12} /> CTS Certified Attendants
+                  </span>
                 </div>
               </Reveal>
 
@@ -114,6 +109,37 @@ export default function HomePage() {
                   </div>
                 </div>
               </Reveal>
+            </div>
+
+            {/* Mobile Tags Marquee */}
+            <div className={styles.mobileHeroTagsMarquee}>
+              <div className={styles.heroTagsTrack}>
+                <span className={styles.heroInfoPill}>
+                  <MapPin size={12} /> 9+ Service Areas
+                </span>
+                <span className={styles.heroInfoPill}>
+                  <ShieldCheck size={12} /> CTS Certified Attendants
+                </span>
+                <span className={styles.heroInfoPill}>
+                  <Clock size={12} /> 24/7 Dispatch
+                </span>
+                <span className={styles.heroInfoPill}>
+                  <Truck size={12} /> Wheelchair & Stretcher
+                </span>
+                {/* Duplicates for infinite scroll */}
+                <span className={styles.heroInfoPill} aria-hidden="true">
+                  <MapPin size={12} /> 9+ Service Areas
+                </span>
+                <span className={styles.heroInfoPill} aria-hidden="true">
+                  <ShieldCheck size={12} /> CTS Certified Attendants
+                </span>
+                <span className={styles.heroInfoPill} aria-hidden="true">
+                  <Clock size={12} /> 24/7 Dispatch
+                </span>
+                <span className={styles.heroInfoPill} aria-hidden="true">
+                  <Truck size={12} /> Wheelchair & Stretcher
+                </span>
+              </div>
             </div>
           </div>
         </div>
@@ -147,7 +173,7 @@ export default function HomePage() {
                     <ShieldCheck size={18} />
                   </div>
                   <div>
-                    <span className={styles.missionBadgeTitle}>BLS Certified</span>
+                    <span className={styles.missionBadgeTitle}>CTS Certified</span>
                     <span className={styles.missionBadgeSub}>Trained Attendants</span>
                   </div>
                 </div>
@@ -274,7 +300,7 @@ export default function HomePage() {
                   Professional, accessible transport tailored to every patient need.
                 </p>
               </div>
-              <div className={styles.servicesHeaderRight}>
+              <div className={`${styles.servicesHeaderRight} ${styles.desktopCta}`}>
                 <Link href="/services" className={styles.servicesViewAll}>
                   View All
                   <span className={styles.servicesViewAllIcon}>
@@ -290,6 +316,14 @@ export default function HomePage() {
               <ServiceCarousel items={SERVICE_SLIDES} />
             </Reveal>
           </div>
+          <div className={styles.mobileCtaWrap}>
+            <Link href="/services" className={styles.servicesViewAll}>
+              View All
+              <span className={styles.servicesViewAllIcon}>
+                <ArrowUpRight size={14} />
+              </span>
+            </Link>
+          </div>
         </div>
       </section>
 
@@ -304,7 +338,7 @@ export default function HomePage() {
                 From booking to arrival, we keep a simple process.
               </p>
             </div>
-            <div className={styles.stepsHeaderRight}>
+            <div className={`${styles.stepsHeaderRight} ${styles.desktopCta}`}>
               <Link href="/book" className={styles.stepsCtaBtn}>
                 Book Transport Now
                 <span className={styles.stepsCtaArrow}>
@@ -351,6 +385,14 @@ export default function HomePage() {
               </Reveal>
             ))}
           </div>
+          <div className={styles.mobileCtaWrap}>
+            <Link href="/book" className={styles.stepsCtaBtn}>
+              Book Transport Now
+              <span className={styles.stepsCtaArrow}>
+                <ArrowUpRight size={14} />
+              </span>
+            </Link>
+          </div>
         </div>
       </section>
 
@@ -366,7 +408,7 @@ export default function HomePage() {
                 County, and surrounding communities.
               </p>
             </div>
-            <div className={styles.areasHeaderRight}>
+            <div className={`${styles.areasHeaderRight} ${styles.desktopCta}`}>
               <Link href="/service-areas" className={styles.areasViewAll}>
                 View All Areas
                 <span className={styles.areasViewAllIcon}>
@@ -404,6 +446,14 @@ export default function HomePage() {
               </Reveal>
             ))}
           </div>
+          <div className={styles.mobileCtaWrap}>
+            <Link href="/service-areas" className={styles.areasViewAll}>
+              View All Areas
+              <span className={styles.areasViewAllIcon}>
+                <ArrowUpRight size={14} />
+              </span>
+            </Link>
+          </div>
         </div>
       </section>
 
@@ -418,7 +468,7 @@ export default function HomePage() {
                 Quick answers about our non-emergency patient transport
                 services, booking, and coverage areas.
               </p>
-              <Link href="/faq" className={styles.faqViewAll}>
+              <Link href="/faq" className={`${styles.faqViewAll} ${styles.desktopCta}`}>
                 View All
                 <span className={styles.faqViewAllIcon}>
                   <ArrowUpRight size={14} />
@@ -427,6 +477,14 @@ export default function HomePage() {
             </div>
             <div className={styles.faqRight}>
               <FAQAccordion items={FAQ_ITEMS.slice(0, 5)} defaultOpen={0} />
+            </div>
+            <div className={`${styles.mobileCtaWrap} ${styles.faqMobileCta}`}>
+              <Link href="/faq" className={styles.faqViewAll}>
+                View All
+                <span className={styles.faqViewAllIcon}>
+                  <ArrowUpRight size={14} />
+                </span>
+              </Link>
             </div>
           </div>
         </div>
@@ -444,7 +502,7 @@ export default function HomePage() {
                   Read what our patients and their families have to say about their experience.
                 </p>
               </div>
-              <div className={styles.reviewsHeaderRight}>
+              <div className={`${styles.reviewsHeaderRight} ${styles.desktopCta}`}>
                 <a
                   href="https://www.google.com/maps/place/Norfolk+Patient+Transport"
                   target="_blank"
@@ -464,6 +522,19 @@ export default function HomePage() {
             <Reveal>
               <ReviewsMarquee />
             </Reveal>
+          </div>
+          <div className={styles.mobileCtaWrap}>
+            <a
+              href="https://www.google.com/maps/place/Norfolk+Patient+Transport"
+              target="_blank"
+              rel="noopener noreferrer"
+              className={styles.reviewsViewAll}
+            >
+              Google Reviews
+              <span className={styles.reviewsViewAllIcon}>
+                <ExternalLink size={14} />
+              </span>
+            </a>
           </div>
         </div>
       </section>

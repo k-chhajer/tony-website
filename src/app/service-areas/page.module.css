@@ -87,6 +87,7 @@
   line-height: 1.5;
   display: -webkit-box;
   -webkit-line-clamp: 2;
+  line-clamp: 2;
   -webkit-box-orient: vertical;
   overflow: hidden;
 }
@@ -133,5 +134,19 @@
   .areaCard {
     height: 220px;
     border-radius: 18px;
+  }
+
+  .areaCardName {
+    font-size: 1.05rem;
+  }
+
+  .areaCardSummary {
+    font-size: 0.7rem;
+    line-height: 1.35;
+  }
+  
+  .areaCardPin {
+    width: 28px;
+    height: 28px;
   }
 }

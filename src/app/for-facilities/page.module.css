@@ -189,10 +189,20 @@
 }
 
 @media (max-width: 640px) {
-  .benefitsGrid, .facilityGrid { grid-template-columns: 1fr; }
-  .benefitCard, .facilityCard { min-height: 240px; }
-  .cardBody { padding: 1.25rem; }
-  .cardBody h3 { font-size: 1rem; }
+  .benefitsGrid, .facilityGrid { grid-template-columns: repeat(2, 1fr); gap: 0.75rem; }
+  .benefitCard, .facilityCard { min-height: 180px; }
+  .cardBody { padding: 1rem; }
+  .cardBody h3 { font-size: 0.85rem; }
+  .cardBody p { font-size: 0.7rem; line-height: 1.3; }
+  .cardIconBubble { width: 36px; height: 36px; }
   .sectionHeadCenter { margin-bottom: 2rem; }
   .checkList li { font-size: 0.88rem; padding: 0.65rem 0.85rem; }
+  
+  .dischargeHeading {
+    align-items: center;
+    text-align: center;
+  }
+  .dischargeSplit {
+    gap: 2rem;
+  }
 }

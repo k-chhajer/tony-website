@@ -26,7 +26,7 @@ export default function ReachSection({
           <div className={styles.message}>
             <h2 className={styles.title}>{title}</h2>
             <p className={styles.desc}>{description}</p>
-            <div className={styles.ctas}>
+            <div className={`${styles.ctas} ${styles.desktopCta}`}>
               <Link href={primaryHref} className={styles.primary}>
                 {primaryLabel}
                 <span className={styles.primaryArrow}>
@@ -81,6 +81,20 @@ export default function ReachSection({
                 </div>
               </div>
             </div>
+          </div>
+        </Reveal>
+
+        <Reveal delay={200}>
+          <div className={`${styles.ctas} ${styles.mobileCtaWrap}`}>
+            <Link href={primaryHref} className={styles.primary}>
+              {primaryLabel}
+              <span className={styles.primaryArrow}>
+                <ArrowUpRight size={14} />
+              </span>
+            </Link>
+            <Link href="/contact" className={styles.outline}>
+              Contact Us <ArrowRight size={14} />
+            </Link>
           </div>
         </Reveal>
       </div>

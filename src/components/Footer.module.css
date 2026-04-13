@@ -176,7 +176,8 @@
 @media (max-width: 640px) {
   .footerGrid {
     grid-template-columns: 1fr;
-    gap: 2rem;
+    gap: 2.5rem;
+    text-align: center;
   }
 
   .footerMain {
@@ -185,10 +186,31 @@
 
   .brandCol {
     grid-column: auto;
+    align-items: center;
+  }
+
+  .colTitle {
+    text-align: center;
+  }
+
+  .linkList {
+    align-items: center;
+  }
+
+  .contactList li {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 0.4rem;
+  }
+  
+  .contactList li svg {
+    margin-top: 0;
   }
 
   .bottomBarInner {
     flex-direction: column;
     text-align: center;
+    gap: 1.25rem;
   }
 }

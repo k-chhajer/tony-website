@@ -2,6 +2,7 @@
 
 import { useState, useEffect, useCallback } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { Phone, Menu, X, ArrowUpRight } from "lucide-react";
 import styles from "./Header.module.css";
 import { SITE, NAV_LINKS } from "@/lib/constants";
@@ -41,7 +42,11 @@ export default function Header() {
               <Link
                 key={link.href}
                 href={link.href}
-                className={styles.navPill}
+                className={`${styles.navPill} ${
+                  ["/about", "/services", "/contact"].includes(link.href)
+                    ? styles.mobileVisiblePill
+                    : styles.mobileHiddenPill
+                }`}
               >
                 {link.label}
               </Link>
@@ -88,7 +93,12 @@ export default function Header() {
             className={styles.drawerLogo}
             onClick={() => setMenuOpen(false)}
           >
-            Norfolk PT
+            <Image
+              src="/images/logo.svg"
+              alt={SITE.name}
+              width={150}
+              height={34}
+            />
           </Link>
           <button
             className={styles.closeBtn}

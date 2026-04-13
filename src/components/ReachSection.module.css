@@ -200,3 +200,21 @@ a.contactItem:hover .contactIcon {
     border-radius: 20px;
   }
 }
+
+.mobileCtaWrap {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .desktopCta {
+    display: none !important;
+  }
+  .mobileCtaWrap {
+    display: flex;
+    width: 100%;
+  }
+  .message {
+    align-items: center;
+    text-align: center;
+  }
+}
